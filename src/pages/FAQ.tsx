@@ -1,30 +1,16 @@
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Link } from "react-router-dom";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
 
 const FAQ = () => {
   return (
-    <div className="min-h-screen bg-background">
-      <header className="border-b">
-        <div className="container mx-auto px-4 py-4">
-          <nav className="flex items-center justify-between">
-            <Link to="/" className="text-2xl font-bold text-primary">EduPro</Link>
-            <div className="hidden md:flex space-x-6">
-              <Link to="/" className="text-foreground hover:text-primary">Главная</Link>
-              <Link to="/courses" className="text-foreground hover:text-primary">Курсы</Link>
-              <Link to="/about" className="text-foreground hover:text-primary">О платформе</Link>
-              <Link to="/blog" className="text-foreground hover:text-primary">Блог</Link>
-              <Link to="/faq" className="text-primary font-semibold">FAQ</Link>
-              <Link to="/contact" className="text-foreground hover:text-primary">Контакты</Link>
-            </div>
-            <Button asChild>
-              <Link to="/login">Войти</Link>
-            </Button>
-          </nav>
-        </div>
-      </header>
+    <div className="flex min-h-screen flex-col">
+      <Header />
 
-      <section className="py-16">
+      <main className="flex-1">
+        <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h1 className="text-4xl font-bold mb-4">Часто задаваемые вопросы</h1>
@@ -125,13 +111,10 @@ const FAQ = () => {
             </div>
           </div>
         </div>
-      </section>
+        </section>
+      </main>
 
-      <footer className="bg-muted py-12 mt-16">
-        <div className="container mx-auto px-4 text-center text-muted-foreground">
-          <p>&copy; 2024 EduPro. Все права защищены.</p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };

@@ -12,8 +12,6 @@ import Blog from "./pages/Blog";
 import FAQ from "./pages/FAQ";
 import Contact from "./pages/Contact";
 import Login from "./pages/Login";
-import Dashboard from "./pages/Dashboard";
-
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -30,7 +28,7 @@ const App = () => (
           <Route path="/faq" element={<FAQ />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/register" element={<Login />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
